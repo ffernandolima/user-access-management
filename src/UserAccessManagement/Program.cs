@@ -32,8 +32,8 @@ namespace UserAccessManagement
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
-            app.Services.CreateDatabase();
             app.UseStatusCodePages();
+            app.Services.CreateDatabase();
             app.Run();
         }
     }

@@ -20,6 +20,7 @@ namespace UserAccessManagement.Application.Models
 
         [FieldHidden]
         public int LineNumber { get; private set; }
+
         [FieldHidden]
         public string RecordString { get; private set; }
 

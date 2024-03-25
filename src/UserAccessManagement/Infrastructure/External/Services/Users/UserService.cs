@@ -65,7 +65,7 @@ namespace UserAccessManagement.Infrastructure.External.Services.Users
         {
             ArgumentNullException.ThrowIfNull(request);
 
-            var response = await _httpClient.PatchAsJsonAsync($"/users/{request.Id}", request, cancellationToken);
+            var response = await _httpClient.PatchAsJsonAsync($"/users/{request.Id}", request.UpdateProperties, cancellationToken);
 
             response.EnsureSuccessStatusCode();
 

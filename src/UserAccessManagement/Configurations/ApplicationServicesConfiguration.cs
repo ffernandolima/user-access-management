@@ -165,7 +165,8 @@ namespace UserAccessManagement.Configurations
                 .GetRequiredService<IServiceScopeFactory>()
                 .CreateScope();
 
-            var context = serviceScope.ServiceProvider
+            var context = serviceScope
+                .ServiceProvider
                 .GetService<UserAccessManagementContext>();
 
             context.Database.EnsureDeleted();

@@ -7,13 +7,13 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using UserAccessManagement.Application.Exceptions;
-using UserAccessManagement.Application.Models;
 using UserAccessManagement.Domain;
 using UserAccessManagement.Infrastructure.Data;
 using UserAccessManagement.Infrastructure.External.Services.Employers;
 using UserAccessManagement.Infrastructure.External.Services.Employers.Requests;
 using UserAccessManagement.Infrastructure.External.Services.Employers.Responses;
 using UserAccessManagement.Infrastructure.External.Services.Users;
+using UserAccessManagement.Infrastructure.External.Services.Users.Models;
 using UserAccessManagement.Infrastructure.External.Services.Users.Requests;
 using UserAccessManagement.Infrastructure.External.Services.Users.Responses;
 
