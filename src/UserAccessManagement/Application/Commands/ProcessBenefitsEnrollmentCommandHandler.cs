@@ -68,7 +68,7 @@ namespace UserAccessManagement.Application.Commands
 
                 await RemoveExistingEnrollmentsAsync(employer.Name, cancellationToken);
 
-                await ProcessDownloadedFile(downloadedFile, employer, cancellationToken);
+                await ProcessDownloadedFileAsync(downloadedFile, employer, cancellationToken);
 
                 await DeleteUsersAsync(employer.Id, cancellationToken);
 
@@ -82,7 +82,7 @@ namespace UserAccessManagement.Application.Commands
             }
         }
 
-        private async Task ProcessDownloadedFile(string downloadedFile, RetrieveEmployerResponse employer, CancellationToken cancellationToken)
+        private async Task ProcessDownloadedFileAsync(string downloadedFile, RetrieveEmployerResponse employer, CancellationToken cancellationToken)
         {
             var readEngine = new FileHelperAsyncEngine<BenefitsEnrollmentFileRecord>(Encoding.UTF8);
 
