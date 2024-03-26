@@ -20,7 +20,7 @@ namespace UserAccessManagement.UnitTests.Application.Commands
         }
 
         [Fact]
-        public void Ctor_Throws_Exception_When_Producer_Service_Is_NuLL()
+        public void Ctor_Throws_Exception_When_Producer_Service_Is_Null()
         {
             // Assert
             Assert.Throws<ArgumentNullException>(() => new RequestBenefitsEnrollmentCommandHandler(null));

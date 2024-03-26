@@ -35,7 +35,7 @@ namespace UserAccessManagement.UnitTests.Application.Validators
         }
 
         [Fact]
-        public void Should_Have_Error_When_Email_Is_Not_Vdalid()
+        public void Should_Have_Error_When_Email_Is_Not_Valid()
         {
             var model = new SignUpCommand { Email = "plainaddress" };
             var result = _validator.TestValidate(model);
@@ -123,7 +123,7 @@ namespace UserAccessManagement.UnitTests.Application.Validators
         }
 
         [Fact]
-        public void Should_Have_Error_When_Country_Is_Not_Vdalid()
+        public void Should_Have_Error_When_Country_Is_Not_Valid()
         {
             var model = new SignUpCommand { Country = "Brazilzilzil" };
             var result = _validator.TestValidate(model);
