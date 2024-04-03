@@ -55,7 +55,7 @@ namespace UserAccessManagement.Application.Commands
             return true;
         }
 
-        public async Task<BenefitsEnrollment> GetBenefitsEnrollmentAsync(string email, CancellationToken cancellationToken)
+        private async Task<BenefitsEnrollment> GetBenefitsEnrollmentAsync(string email, CancellationToken cancellationToken)
         {
             var query = _repository.SingleResultQuery().AndFilter(x => x.Email == email);
 
@@ -64,7 +64,7 @@ namespace UserAccessManagement.Application.Commands
             return benefitsEnrollment;
         }
 
-        public async Task<bool> CreateUserAsync(BenefitsEnrollment benefitsEnrollment, string password, CancellationToken cancellationToken)
+        private async Task<bool> CreateUserAsync(BenefitsEnrollment benefitsEnrollment, string password, CancellationToken cancellationToken)
         {
             var employer = await GetEmployerAsync(benefitsEnrollment.EmployerName, cancellationToken);
 
@@ -99,7 +99,7 @@ namespace UserAccessManagement.Application.Commands
             return employer;
         }
 
-        public async Task<bool> CreateUserAsync(SignUpCommand request, CancellationToken cancellationToken)
+        private async Task<bool> CreateUserAsync(SignUpCommand request, CancellationToken cancellationToken)
         {
             await CheckIfEmailExistsAsync(request.Email, cancellationToken);
 
